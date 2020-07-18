@@ -1,24 +1,19 @@
 package media.converter;
 
 import ws.schild.jave.*;
+
 import java.io.File;
 
-public class mp3converter extends Thread{
+public class mediaConverter {
 
-    private int x = (int) (Math.random()*100);
     private String path="media/ToConvert/mp4TOmp3/test.mp4";
-    private String desPath="media/Converted/mp4TOmp3-Converted/output"+x+".mp3";
+    private String desPath="media/Converted/mp4TOmp3-Converted/output.mp3";
 
-    public mp3converter(){}
+    public void convertToMp3(String path, String desPath){
 
-    public mp3converter(String path, String desPath){
-        this.path = path;
-        this.desPath = desPath;
-    }
-
-    public void run(){
         File video= new File(path);
         File target = new File(desPath);
+
 
         AudioAttributes audio = new AudioAttributes();
 
@@ -39,5 +34,4 @@ public class mp3converter extends Thread{
             e.printStackTrace();
         }
     }
-
 }

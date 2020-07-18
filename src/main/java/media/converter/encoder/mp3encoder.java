@@ -1,11 +1,11 @@
 package media.converter.encoder;
 
-
+import media.converter.converter;
 import ws.schild.jave.*;
 
 import java.io.File;
 
-public class mp3encoder{
+public class mp3encoder extends converter {
 
     private int x = (int) (Math.random()*100);
     private String path="media/ToConvert/mp4TOmp3/test.mp4";
