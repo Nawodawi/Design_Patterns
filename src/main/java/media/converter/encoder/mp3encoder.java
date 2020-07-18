@@ -1,22 +1,25 @@
-package media.converter;
+package media.converter.encoder;
+
 
 import ws.schild.jave.*;
+
 import java.io.File;
 
-public class mp3converter{
+public class mp3encoder{
 
     private int x = (int) (Math.random()*100);
     private String path="media/ToConvert/mp4TOmp3/test.mp4";
     private String desPath="media/Converted/mp4TOmp3-Converted/output"+x+".mp3";
 
-    public mp3converter(){}
+    public mp3encoder(){}
 
-    public mp3converter(String path, String desPath){
+    public mp3encoder(String path, String desPath){
         this.path = path;
         this.desPath = desPath;
     }
 
-    public void run(){
+    @Override
+    public void encode() {
         File video= new File(path);
         File target = new File(desPath);
 
@@ -38,6 +41,11 @@ public class mp3converter{
                 EncoderException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void run() {
+        encode();
     }
 
 }

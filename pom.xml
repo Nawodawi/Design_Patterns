@@ -19,9 +19,32 @@
             </plugin>
         </plugins>
     </build>
-   
+   <dependencies>
+        <dependency>
+            <groupId>ws.schild</groupId>
+            <artifactId>jave-all-deps</artifactId>
+            <version>2.7.3</version>
+        </dependency>
 
-	<Dependancies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.1</version>
+        </dependency>
+
+	
 		<dependency>
             <groupId>ws.schild</groupId>
             <artifactId>jave-core</artifactId>
@@ -34,7 +57,7 @@
             <version>2.7.3</version>
         </dependency>
 
-	</Dependancies
+	</dependencies>
 
 
 </project>
